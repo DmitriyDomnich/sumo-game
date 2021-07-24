@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('./_global.scss');
+
+@mixin flex-centered {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-centered-container {
+    @include flex-centered();
+}
+
+.heroDies {
+    animation: deadAnimation 2s linear forwards;
+}
+
+@keyframes deadAnimation {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 0%;
+    }
+}
+
+@keyframes legsMove {
+    0% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes respawn {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: .65;
+    }
+
+    50% {
+        opacity: .30;
+    }
+
+    75% {
+        opacity: .65;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+$field-items-width: .8em;
+
+
+.heroRespawn {
+    animation: respawn 1s linear;
+    animation-iteration-count: 2;
+}
+
+.healthBlinking {
+    animation: respawn 1s linear;
+    animation-iteration-count: 12;
+}
+
+h1 {
+    color: aqua;
+    margin: 1rem auto;
+    margin-top: .5rem;
+    font-size: 3em;
+    text-shadow: 5px 5px 5px rgb(85, 7, 38);
+}
+
+.rotateGun {
+    animation: rotate 1s linear infinite;
+}
+
+.animateRightLeg {
+    animation: legsMove ease infinite .5s;
+}
+
+.animateLeftLeg {
+    animation: legsMove ease infinite .5s 100ms;
+}
+
+span {
+    font-size: .5em;
+}
+
+
+#hero {
+    position: absolute;
+    z-index: 1;
+}
+
+.defaultHeroAnimation {
+    transition: all linear .05s;
+}
+
+.heroPushed {
+    transition: all linear 1s;
+}
+
+main {
+    overflow: hidden;
+    position: relative;
+    height: 90vh;
+    width: 80vw;
+    background-color: khaki;
+    margin: auto;
+
+    .field-border {
+        position: absolute;
+    }
+
+    .connector {
+        position: absolute;
+        background-color: brown;
+        width: $field-items-width;
+        height: 3em;
+    }
+
+    .left-top {
+        left: 27%;
+        transform: rotate(45deg);
+        top: 11%;
+    }
+
+    .left-bottom {
+        left: 27%;
+        transform: rotate(-45deg);
+        bottom: 10%;
+    }
+
+    .right-bottom {
+        right: 27%;
+        transform: rotate(45deg);
+        bottom: 10%;
+    }
+
+    .right-top {
+        right: 27%;
+        transform: rotate(-45deg);
+        top: 11%;
+    }
+
+    .left {
+        width: $field-items-width;
+        height: 65%;
+        background-color: brown;
+        left: 25%;
+        top: 17.5%;
+    }
+
+    .top {
+        width: 40%;
+        height: $field-items-width;
+        background-color: brown;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10%;
+    }
+
+    .bottom {
+        width: 40%;
+        height: $field-items-width;
+        background-color: brown;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10%;
+    }
+
+    .right {
+        width: $field-items-width;
+        height: 65%;
+        background-color: brown;
+        right: 25%;
+        top: 17.5%;
+    }
+
+    .circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        width: clamp(15em, 35em, 50%);
+        height: 60%;
+        border: 10px brown solid;
+        border-radius: 50%;
+        @include flex-centered();
+        align-items: center;
+
+        .left-block,
+        .right-block {
+            background-color: brown;
+            position: absolute;
+            height: 5.4em;
+            width: $field-items-width;
+        }
+
+        .left-block {
+            left: -2.4em;
+        }
+
+        .right-block {
+            right: -2.4em;
+        }
+
+        .left {
+            left: -10px;
+        }
+
+        .right {
+            right: -10px;
+        }
+
+        aside {
+            margin: 0;
+            width: 11px;
+            height: 3em;
+            background-color: khaki;
+            position: absolute;
+        }
+
+        .line {
+            background-color: brown;
+            width: 1%;
+            height: 40%;
+            margin: 0 3em;
+        }
+
+    }
+
+    .head {
+        height: 3em;
+        background-color: cornflowerblue;
+        display: flex;
+        justify-content: space-around;
+
+        .healths {
+            display: flex;
+            width: 13%;
+            justify-content: center;
+
+            .health {
+                width: 33.3%;
+                background-image: url('../assets/icons/health.png');
+                background-size: 3.5em 100%;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .center {
+            width: 30%;
+            @include flex-centered;
+            align-items: center;
+
+            #progress {
+                height: 80%;
+                width: 80%;
+                background-color: yellow;
+                display: flex;
+                justify-content: center;
+
+                div {
+                    transition: width ease .5s;
+                    height: 100%;
+                    background-color: blue;
+                    width: 0%;
+                }
+            }
+        }
+
+        .points {
+            font-size: 1.5em;
+            user-select: none;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            width: 10%;
+        }
+    }
+
+    section {
+        overflow: hidden;
+        position: relative;
+        height: calc(100% - 3em);
+
+        .mob {
+            position: absolute;
+            transition: all .1s linear;
+        }
+    }
+}

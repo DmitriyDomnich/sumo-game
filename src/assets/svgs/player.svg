@@ -1,0 +1,40 @@
+<svg width="133" height="180" viewBox="0 0 133 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Mask Group">
+<g id="Frame 1">
+<path id="LeftLeg" d="M86 150H106V180H86V150Z" fill="#C8A855"/>
+<rect id="RightLeg" x="30" y="150" width="20" height="30" fill="#C8A855"/>
+<g id="Body">
+<path id="Ellipse 6" d="M128 111.5C128 138.838 101.361 161 68.5 161C35.6391 161 9 138.838 9 111.5C9 84.1619 35.6391 62 68.5 62C101.361 62 128 84.1619 128 111.5Z" fill="#D6B38A"/>
+<g id="Frame">
+<path id="Vector" d="M115 142L83 143.457V159L92.8065 156.571L106.226 150.257L115 142Z" fill="#FF0000" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Vector 4" d="M21 81L1 102.207C1.55556 107.724 2.88889 119.69 3.77778 123.414C4.66667 127.138 13.7778 136.69 18.2222 141L21 136.345L14.3333 120.828L12.6667 115.655V107.897V99.6207L21 82.5517V81Z" fill="#C8A855" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 7" d="M22 142L54 143.457V159L44.1935 156.571L30.7742 150.257L22 142Z" fill="#FF0000" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Frame_2">
+<path id="Vector_2" d="M114.95 81.9833L132.05 102.142C131.575 107.386 130.435 118.76 129.675 122.3C128.915 125.84 121.125 134.919 117.325 139.017L114.95 134.592L120.65 119.842L122.075 114.925V107.55V99.6833L114.95 83.4583V81.9833Z" fill="#C8A855" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect id="Rectangle 1" x="54.5" y="143.5" width="28" height="31" fill="#D60C0C" stroke="black"/>
+</g>
+<g id="Head">
+<ellipse id="Ellipse 1" cx="67" cy="56.5" rx="36" ry="34.5" fill="#C8A855"/>
+<path id="Vector 3" d="M47.9869 71.0621L57.0133 79.5341L70.5132 79.4922L82.0131 79.4565L87.9867 70.9379" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Vector 1">
+<g id="Group 2">
+<g id="Vector 1_2">
+<path d="M51.6667 33.3519C55.6548 31.6389 40 42.3333 30 49V36L46.7143 23H66L51.6667 33.3519Z" fill="black"/>
+<path d="M46.7143 36C62.1429 27.2 42 41 30 49M30 49V36L46.7143 23H66L30 49Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Vector_3" d="M79.3333 32.3519C75.3452 30.6389 91 41.3333 101 48V35L84.2857 22H65L79.3333 32.3519Z" fill="black"/>
+<ellipse id="Ellipse 4" cx="66.5" cy="19" rx="19.5" ry="16" fill="black"/>
+</g>
+<path id="Vector 6" d="M83.1923 45.1659L79.304 53.4955L76.1997 44.8431" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 5" d="M56.4938 44.4949L52.5062 53.5003L48.9938 44.5052" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="Group 3">
+<path id="Vector 2" d="M68 59L61.5 62.5L68 67" stroke="black" stroke-opacity="0.54" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Ellipse 5" d="M68 62.5C68 63.3284 67.5523 64 67 64C66.4477 64 65 63.3284 65 62.5C65 61.6716 66.4477 61 67 61C67.5523 61 68 61.6716 68 62.5Z" fill="#C4C4C4"/>
+</g>
+</g>
+</g>
+</g>
+</svg>

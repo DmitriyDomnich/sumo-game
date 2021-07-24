@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+$testVar: 10;
+
+* {
+    font-size: 16px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+@mixin test {
+    background-color: black;
+    height: 5em;
+    width: 5em;
+    display: block;
+    padding: 1em;
+    border: 3px dotted blueviolet;
+}
+
+.test {
+    @include test();
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to top, #ff5f6d, #ffc371);
+    //background: linear-gradient(to left, #c0392b, #8e44ad);
+}
