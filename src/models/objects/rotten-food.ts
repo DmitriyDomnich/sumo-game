@@ -43,16 +43,18 @@ export class RottenFood extends GameObject {
         return size / 10;
     }
     public onCollide() {
-        const mob: HTMLDivElement = document.querySelector(`[data-name^="${this.name}"]`)!;
-        mob.remove();
         if (!this.hero.isInvulnerable) {
             new Howl({
                 autoplay: true,
                 src: this.svg.sound
             });
+            const mob: HTMLDivElement = document.querySelector(`[data-name^="${this.name}"]`)!;
+            mob.remove();
             this.gameState.decreaseProgress(this.calculateProgress(Math.round(+mob.style.width.slice(0, -2))));
         } else {
             if (!this.hero.heroHtmlElement.classList.contains('heroRespawn')) {
+                const mob: HTMLDivElement = document.querySelector(`[data-name^="${this.name}"]`)!;
+                mob.remove();
                 document.querySelector('.health:last-child')?.classList.remove('healthBlinking');
                 this.hero.isInvulnerable = false;
             }
