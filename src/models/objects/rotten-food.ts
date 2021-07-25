@@ -57,6 +57,9 @@ export class RottenFood extends GameObject {
                 mob.remove();
                 this.hero.heroHtmlElement.classList.remove('healthBlinking');
                 this.hero.isInvulnerable = false;
+
+                console.log('ADDED THIS');
+
             }
         }
     }
