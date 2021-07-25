@@ -128,11 +128,11 @@ export class Sumoist extends GameObject {
         } else if (this.hero.isInvulnerable) {
             this.hero.isCollided = true;
             this.hero.heroHtmlElement.classList.add('heroRespawn');
-            document.querySelector('.health:last-child')?.classList.remove('healthBlinking');
             timer(1500).subscribe(_ => {
                 this.hero.isCollided = false;
                 this.hero.isInvulnerable = false;
                 this.hero.heroHtmlElement.classList.remove('heroRespawn');
+                this.hero.heroHtmlElement.classList.remove('healthBlinking');
             });
         }
     }

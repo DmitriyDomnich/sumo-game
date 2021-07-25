@@ -14,8 +14,7 @@ export class GameState {
     private readonly _shieldObserver: any = {
         next: (_: any) => {
             this.hero.isInvulnerable = false;
-            document.querySelector('.health')?.classList.remove('healthBlinking');
-            this.hero.heroHtmlElement.classList.remove('shielded');
+            this.hero.heroHtmlElement.classList.remove('healthBlinking');
         }
     };
     private readonly _timer$ = timer(12000);
@@ -88,10 +87,9 @@ export class GameState {
         this._additionalSize += 10;
         this._speed += 2;
     }
-
     public makeHeroInvulnerable() {
         this.hero.isInvulnerable = true;
-        document.querySelector('.health:last-child')?.classList.add('healthBlinking');
+        this.hero.heroHtmlElement.classList.add('healthBlinking');
         if (this.hero.isInvulnerable) {
             this._subscription?.unsubscribe();
             this._subscription = this._timer$.subscribe(this._shieldObserver);

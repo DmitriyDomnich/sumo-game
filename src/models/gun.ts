@@ -1,5 +1,5 @@
-import { from, iif, interval, of, Subscription } from "rxjs";
-import { filter, finalize, switchMap, takeWhile, tap } from "rxjs/operators";
+import { iif, interval, Subscription } from "rxjs";
+import { takeWhile, tap } from "rxjs/operators";
 import { Hero } from "./hero";
 import gunSvg from "../assets/svgs/gun.svg";
 
