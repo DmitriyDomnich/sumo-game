@@ -6,7 +6,7 @@ import { Upgrade } from "../hero-upgrades/upgrade";
 export class UpgradeCreator {
 
     public createUpgrade(): Observable<Upgrade> {
-        return Math.round(Math.random()) ? of(new ShieldUpgrade()) : of(new GunUpgrade());
+        return Math.round(Math.random()) ? of(new ShieldUpgrade()) : of(new GunUpgrade())
     }
 
 }

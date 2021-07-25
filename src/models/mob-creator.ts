@@ -36,7 +36,7 @@ export class MobCreator {
             switchMap(_ => timer(this._defaultDelay, this.getRandomIntervalTime())
                 .pipe(switchMap(_ => this._pufferFishCreator.createWave(this.getRandomMobNumber(4)))
                 )));
-        const upgrades$ = timer(5000, this.getUpgradeIntervalTime()).pipe(
+        const upgrades$ = timer(1000, 3000).pipe(
             switchMap(_ => this._upgradeCreator.createUpgrade())
         );
         const res$ = freshFood$.pipe(mergeWith(pufferFish$, rottenFood$, sumoist$));
