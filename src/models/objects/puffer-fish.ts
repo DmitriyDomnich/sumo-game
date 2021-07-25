@@ -42,7 +42,7 @@ export class PufferFish extends GameObject {
         } else {
             if (!this.hero.heroHtmlElement.classList.contains('heroRespawn')) {
                 document.querySelector(`[data-name^="${this.name}"]`)!.remove();
-                document.querySelector('.health:last-child')?.classList.remove('healthBlinking');
+                this.hero.heroHtmlElement.classList.remove('healthBlinking');
                 this.hero.isInvulnerable = false;
             }
         }

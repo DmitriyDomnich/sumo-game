@@ -55,7 +55,7 @@ export class RottenFood extends GameObject {
             if (!this.hero.heroHtmlElement.classList.contains('heroRespawn')) {
                 const mob: HTMLDivElement = document.querySelector(`[data-name^="${this.name}"]`)!;
                 mob.remove();
-                document.querySelector('.health:last-child')?.classList.remove('healthBlinking');
+                this.hero.heroHtmlElement.classList.remove('healthBlinking');
                 this.hero.isInvulnerable = false;
             }
         }

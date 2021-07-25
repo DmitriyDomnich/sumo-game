@@ -1,4 +1,3 @@
-
 import { iif, interval, Subscription } from "rxjs";
 import { takeWhile, tap } from "rxjs/operators";
 import { Hero } from "./hero";

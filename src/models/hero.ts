@@ -148,16 +148,17 @@ export class Hero {
         this.heroHtmlElement.style.top = field.clientHeight / 2 - this.heroHtmlElement.clientHeight + 'px';
         this.heroHtmlElement.style.left = field.clientWidth / 2 - this.heroHtmlElement.clientWidth / 2 + 'px';
 
-        this.heroHtmlElement.classList.remove('heroRespawn');
-        this.heroHtmlElement.classList.remove('defaultHeroAnimation');
         this.heroHtmlElement.classList.add('heroRespawn');
-        document.querySelector('.health:last-child')?.classList.remove('healthBlinking');
+        this.heroHtmlElement.classList.remove('defaultHeroAnimation');
+        console.log('just centered', this.heroHtmlElement.classList);
 
         timer(2005).subscribe(_ => {
             if (this.heroHtmlElement.classList.contains('heroRespawn')) {
                 this.heroHtmlElement.classList.remove('heroRespawn');
+                this.heroHtmlElement.classList.remove('healthBlinking');
                 this.heroHtmlElement.classList.add('defaultHeroAnimation');
                 this.isInvulnerable = false;
+                console.log('after timer', this.heroHtmlElement.classList);
             }
         });
     }
